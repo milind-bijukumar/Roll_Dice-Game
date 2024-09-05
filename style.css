@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  box-sizing: inherit;
+  background-color: #e4e3e3;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.player {
+  flex: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  transition: all 0.75s;
+}
+
+.name {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 4rem;
+  color: #f04135;
+  margin-bottom: auto;
+}
+
+.current {
+  background-color: #f04135;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  padding: 10px;
+}
+
+.current-label {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.player-active {
+  background-color: #fff;
+}
+
+.player-active .name {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+.player-active .score {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+.player-active .current {
+  opacity: 0.9;
+  /* font-weight: 600; */
+}
+
+.player-winner {
+  background-color: #60b347;
+  color: #fff;
+}
+
+.player-winner .name {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+.player-winner .score {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/*Absolute Placed Elements*/
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 13rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  position: absolute;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn-new {
+  top: 8rem;
+}
+
+.btn-roll {
+  top: 28rem;
+}
+.btn-hold {
+  top: 32rem;
+}
+
+.btn:hover {
+  font-weight: 700;
+  letter-spacing: 3px;
+  transition: 0.75s;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+  display: none;
+}
